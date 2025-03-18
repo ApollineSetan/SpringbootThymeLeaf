@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CategorieRepository extends CrudRepository<Categorie, Integer> {
-    Categorie findById(long id);
+    Categorie findById(Long id);
 }
