@@ -21,4 +21,8 @@ public class CategorieService {
         return categorieRepository.findById(id);
     }
 
+    public Categorie saveCategorie(Categorie categorie) {
+        return categorieRepository.save(categorie);
+    }
+
 }

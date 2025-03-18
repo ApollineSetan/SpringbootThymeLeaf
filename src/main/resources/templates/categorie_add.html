@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form th:action="@{/categorie}" th:object="${categorie}" method="POST">
+    <label>Saisir le nom de la catégorie</label>
+    <input type="text" name="categorie" th:field="*{libelle}">
+    <input type="submit" value="Ajouter">
+  </form>
+</body>
+</html>

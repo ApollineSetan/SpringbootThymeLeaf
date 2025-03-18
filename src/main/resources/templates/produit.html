@@ -5,11 +5,11 @@
     <title>Produit</title>
 </head>
 <body>
-<h1>Descriptif produit</h1>
+<h1>Descriptif :</h1>
   <div>
-      <h2 data-th-text="${'Nom du produit : ' + produit.nom}">nom</h2>
-      <h2 data-th-text="${'Description du produit : ' + produit.description}">description</h2>
-      <h2 data-th-text="${'Prix du produit : ' + produit.prix + ' euros'}">prix</h2>
+      <h3 data-th-text="${produit.nom}">nom</h3>
+      <p data-th-text="${'Description du produit : ' + produit.description}">description</p>
+      <p data-th-text="${'Prix du produit : ' + produit.prix + ' euros'}">prix</p>
   </div>
 </body>
 </html>

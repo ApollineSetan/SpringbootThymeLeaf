@@ -9,7 +9,7 @@
 <div>
   <ul>
     <li th:each="produit: ${produits}">
-      <h3 th:text="${'Nom : ' + produit.nom}">nom</h3>
+      <h3 th:text="${produit.nom}">nom</h3>
       <p th:text="${'Description : ' + produit.description}">description</p>
       <p th:text="${'Prix : ' + produit.prix + ' euros'}">prix</p>
       <p th:text="${'Catégorie : ' + produit.categorie.libelle}">catégorie</p>
