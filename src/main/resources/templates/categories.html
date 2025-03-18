@@ -9,7 +9,7 @@
 <div>
   <ul>
     <li th:each="categorie: ${categories}">
-      <h2 th:text="${'Nom : ' + categorie.libelle}">libelle</h2>
+      <h2 th:text="${categorie.libelle}">libelle</h2>
     </li>
   </ul>
 </div>

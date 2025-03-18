@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form th:action="@{/produit}" th:object="${produit}" method="POST">
+  <label>Saisir le nom du produit</label>
+  <input type="text" name="produit" th:field="*{nom}"><br>
+  <label>Saisir la description du produit</label>
+  <input type="text" name="description" th:field="*{description}"><br>
+  <label>Saisir le prix du produit</label>
+  <input type="text" name="prix" th:field="*{prix}"><br>
+  <label>Saisir la catégorie</label>
+  <select id="categorie" name="categorie" th:field="*{categorie.id}">
+  <option th:each="categorie: ${categorie}" th:text="${'Catégorie : ' + produit.categorie.libelle}">catégorie</option>
+  </select>
+</form>
+</body>
+</html>
