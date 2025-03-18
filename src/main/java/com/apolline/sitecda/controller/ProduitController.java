@@ -1,7 +1,6 @@
 package com.apolline.sitecda.controller;
 
 import com.apolline.sitecda.model.Produit;
-import com.apolline.sitecda.repository.ProduitRepository;
 import com.apolline.sitecda.service.ProduitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-public class HomeController {
+public class ProduitController {
 
     @Autowired
     private ProduitService produitService;
