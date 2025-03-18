@@ -12,7 +12,7 @@ public class CategorieService {
     private CategorieRepository categorieRepository;
 
     //Récupérer toutes les catégories
-    public Iterable<Categorie> getCategories() {
+    public Iterable<Categorie> getAllCategories() {
         return categorieRepository.findAll();
     }
 

@@ -1,5 +1,6 @@
 package com.apolline.sitecda.controller;
 
+import com.apolline.sitecda.model.Categorie;
 import com.apolline.sitecda.model.Produit;
 import com.apolline.sitecda.service.ProduitService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,19 +21,6 @@ public class ProduitController {
         return "index";
     }
 
-    @GetMapping("/produit")
-    public String produit(Model model) {
-        Produit produit = new Produit("Livre", "Description de ce magnifique livre", 14.99);
-        model.addAttribute("produit", produit);
-        return "produit";
-    }
-
-    @GetMapping("/helloworld/{firstname}")
-    public String helloFirstName(@PathVariable String firstname, Model model) {
-        model.addAttribute("firstname", firstname);
-        return "hellofirstname";
-    }
-
     @GetMapping("/produit/{id}")
     public String getProduitById(@PathVariable Long id, Model model) {
         Produit produit = produitService.getProduitById(id);
@@ -40,5 +28,10 @@ public class ProduitController {
         return "produit";
     }
 
-
+    @GetMapping("/produit")
+    public String getAllProduits(Model model) {
+        Iterable<Produit> produits = produitService.getAllProduits();
+        model.addAttribute("produits", produits);
+        return "produits";
+    }
 }

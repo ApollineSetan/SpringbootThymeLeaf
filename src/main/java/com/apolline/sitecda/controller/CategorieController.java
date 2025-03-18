@@ -29,7 +29,7 @@ public class CategorieController {
 
     @GetMapping("/categorie")
     public String getCategorie(Model model) {
-        Iterable<Categorie> categories = categorieService.getCategories();
+        Iterable<Categorie> categories = categorieService.getAllCategories();
         model.addAttribute("categories", categories);
         return "categories";
 

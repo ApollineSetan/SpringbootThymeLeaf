@@ -12,7 +12,7 @@ public class ProduitService {
     private ProduitRepository produitRepository;
 
     //Récupérer tous les produits
-    public Iterable<Produit> getProduits() {
+    public Iterable<Produit> getAllProduits() {
         return produitRepository.findAll();
     }
 
